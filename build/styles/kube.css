@@ -468,10 +468,6 @@ a.muted:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
-  @media (max-width: 768px) {
-    .row {
-      flex-direction: column;
-      flex-wrap: nowrap; } }
   .row.gutters,
   .row.gutters > .row {
     margin-left: -2%; }
