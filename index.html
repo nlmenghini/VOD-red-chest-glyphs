@@ -26,6 +26,26 @@
 </head>
 
 <body onload="javascript:window_onload();">
+
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left">
+		</div>
+		  <div class="loader-section section-right">
+			<div id="frame" class="frame">
+				<div class="dot dot1"></div>
+				<br>
+				<div class="dot dot2"></div>
+				<div class="dot dot3"></div>
+				<br>
+				<div class="dot dot4"></div>
+				<div class="dot dot5"></div>
+				<br>
+				<div class="dot dot6"></div>
+			</div></div>
+		</div>
+	</div>
+
 	<div class="container">
 		<header class="header">
 				<div class="header_intro">
@@ -168,6 +188,17 @@
 	<script src="build/scripts/modernizr.js"></script>
 	<script src="build/scripts/jquery.mixitup.min.js"></script>
 	<script>
+
+		//loader fadeout
+		$(document).ready(function() {
+				setTimeout(function(){
+						$('body').addClass('loaded');
+				}, 3000);
+				setTimeout(function(){
+						document.getElementById('frame').className = 'frame hidden';
+				}, 2900);
+			});
+
 		$( "div.room-block" ).click(function() {
 		  $( this ).toggleClass( "opacity" );
 		});
